@@ -1,0 +1,70 @@
+/*Day 1*/ 
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+html{
+  font-family: 'Roboto', sans-serif;
+    background-color: #E2F1F1;
+}
+
+.register-section{
+  display: flex;
+  justify-content: center;
+}
+
+.title{
+  color: #1355F0;
+}
+
+.form{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input{
+  background-color: transparent;
+  box-sizing: border-box; 
+  padding: 5px;
+  border: none;
+  font-family:inherit;
+  outline: none; 
+  color: #465270;
+}
+
+.label{
+  color: #1355F0;
+}
+
+.submit{
+  box-sizing: border-box; 
+  padding: 5px;
+  width: 45%;
+  cursor: pointer; 
+  border: none;
+  background-color: #1355F0;
+  color: white; 
+  font-family: inherit;
+  border-radius: 2px;
+  box-shadow: 3px 2px #0297F2;
+}
+
+.submit:active{
+  box-shadow: none; 
+}
+
+input:focus{
+ border-bottom: 2px solid #1355F0;
+  transform: translate(1px, 2px);
+  animation: line 0.5s ease reverse;
+}
+
+@keyframes line{
+  to{
+    width: 0;
+  }
+  from{
+    width: 100%;
+  }
+}
