@@ -4,7 +4,7 @@ A Pen created on CodePen.io. Original URL: [https://codepen.io/ailujj/pen/gOvaBq
 
 Using JavaScript to develop a form  with a functional validation, implementing CRUD . 
 
-## Challenges:
+##Challenges:
 
 Day 1 [X] Creating forms structure with HTML/CSS and capturing the elements of DOM with JavaScript <br>
 Day 2 []
