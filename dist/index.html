@@ -10,17 +10,36 @@
 <!-- partial:index.partial.html -->
 <!---Day 1--->
 
+<!---Day 3--->
+
 <section class="register-section">
 
-<form class="form">
-  <h1 class="title">Meus aniversários</h1>
-  <label for="name" class="label"> Nome </label>
-  <input class="input" name="name" type="text"  placeholder="Type a name" id="js-name">
-    <label for="date" name="date" class="label"> Data </label>
-  <input class="input" name="date" type="date" id="js-date">
-  <button class="submit" type="submit" id="js-submit"> Submit </button>
-</form>
-</section>
+  <form class="form">
+    <h1 class="title">Meus aniversários</h1>
+    
+    <label for="name" class="label"> Nome </label>
+    <input class="input" name="name" type="text"  placeholder="Type a name" id="js-name" required>
+    
+      <label for="date" name="date" class="label"> Data </label>
+    <input class="input" name="date" type="date" id="js-date">
+    
+    <button class="submit" type="submit" id="js-submit"> Submit </button>
+  </form>
+  </section>
+
+  <section class="table-section">
+    <table class="table">
+      <tr id="tr">
+        <th>Nome</th>
+        <th>Data de aniversário</th>
+      </tr>
+      <tr>
+        <td>Ana</td>
+        <td>16/03/2002</td>
+      </tr>
+    </table>
+
+  </section>
 <!-- partial -->
   <script  src="./script.js"></script>
 

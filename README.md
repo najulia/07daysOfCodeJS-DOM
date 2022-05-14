@@ -7,9 +7,9 @@ Using JavaScript to develop a form  with a functional validation, implementing C
 ##Challenges:
 
 Day 1 [X] Creating forms structure with HTML/CSS and capturing the elements of DOM with JavaScript <br>
-Day 2 []
-Day 3 []
-Day 4 []
-Day 5 []
-Day 6 []
-Day 7 []
+Day 2 [ ] Validating forms fields
+Day 3 [X] Saving data in localStorage and creating a table to display it
+Day 4 [ ] Creating an edit button 
+Day 5 [ ] Creating a remove button
+Day 6 [ ] Styling the layout
+Day 7 [ ] Final adjustments and publishing the application
