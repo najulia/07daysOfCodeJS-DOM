@@ -23,8 +23,6 @@ form.addEventListener('submit', (e) =>{
 
   people.push(person); 
 
-  console.log(people);
-
   localStorage.setItem('people', JSON.stringify(updtPerson));
 
 
@@ -78,4 +76,6 @@ tr.appendChild(tdData);
 table.appendChild(tr)
 
 }
+
+
 
