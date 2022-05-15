@@ -1,10 +1,14 @@
-/*Day 1*/ 
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@500&display=swap');
 
 html{
   font-family: 'Roboto', sans-serif;
     background-color: #E2F1F1;
+}
+
+.header{
+  text-align: center;
+  margin-bottom: 10vh;
 }
 
 .register-section{
@@ -13,7 +17,8 @@ html{
 }
 
 .title{
-  color: #1355F0;
+  color: blue;
+  font-family: 'Courgette', cursive;
 }
 
 .form{
@@ -72,15 +77,57 @@ input:focus{
 .table-section{
   display: flex;
   justify-content: center;
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 
 .table{
   color: #1355F0;
-  display: flex;
-  justify-content: center;
+  background-color: white;
+  border: 1px solid #1355F0;
+  width: 50%;
+  box-sizing: border-box;
 }
 
-#tr{
-  background-color: white;
+th{
+  font-family: 'Courgette', cursive;
+  font-size: 1.2rem;
+  background-color: #b6d0ff ;
+}
+
+td{
+  text-align: center;
+}
+
+tr:nth-child(even){
+  background-color: #b6d0ff ;
+}
+
+.delete-button{
+  background-color:  #4280f5;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Courgette';
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+  color: white;
+  margin-left: 40%;
+  font-weight: 700;
+}
+
+.tips{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.message{
+  font-family: 'Courgette';
+  font-size: 0.9rem;
+  padding: 5px;
+  box-sizing: border-box;
+  color: #1355F0;
 }

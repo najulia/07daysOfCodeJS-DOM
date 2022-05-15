@@ -68,6 +68,7 @@ table.appendChild(tr)
 function btnDelete(id){
   let btnDel = document.createElement('button');
   btnDel.innerText = 'X'; 
+  btnDel.classList.add('delete-button');
 
   btnDel.addEventListener('click', function(){ 
     deleteElement(this.parentNode, id);
@@ -89,7 +90,6 @@ localStorage.setItem('people', JSON.stringify(people));
 
 
 }
-
 
 
 
