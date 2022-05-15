@@ -1,5 +1,3 @@
-/*DAY 3 */
-
 let inputName = document.querySelector('#js-name');
 let inputDate = document.querySelector('#js-date');
 let form = document.querySelector('.form')
@@ -17,49 +15,36 @@ form.addEventListener('submit', (e) =>{
     "birthdate": inputDate.value
   }
 
-  let updtPerson = [...people, person]
+  let exist = people.find(person => person.name === inputName.value)
+  
+  if (exist){
+    person.id = exist.id;
+    updateElement(person);
 
-  createTable(person);
+    people[people.findIndex(element => element.id === exist.id)] = person; 
 
-  people.push(person); 
+  } else{
 
-  localStorage.setItem('people', JSON.stringify(updtPerson));
+    person.id = people[people.length -1] ? (people[people.length-1]).id+1 : 0
+    createTable(person);
 
+    people.push(person); 
 
-  inputName.textContent = '';
-  inputDate.textContent = ''; 
+  }
+  
+  localStorage.setItem('people', JSON.stringify(people));
+
+  inputName.innerHTML = '';
+  inputDate.innerHTML = ''; 
+
 })
 
-// function isNameValid(){
-//   let regexp = /^[a-zA-Z]+$/;
-  
-//   let nomeDigitado = inputName.value; 
-  
-//   if(nomeDigitado.match(regexp)){
-//     return; 
-//   } else{
-//     alert("Nome inválido"); 
-//   }
-// }
 
 function transformDate(birthdate){
   let typedDate = birthdate;
   let d = new Date(typedDate);
   return d.toLocaleDateString('pt-BR',{timeZone: 'UTC'});
 }
-
-// function storagePeople(){
-//   let person = {
-//     "name": inputName.value,
-//     "birthdate": inputDate.value
-//   }
-  
-//   people.push(person); 
-
-//   localStorage.setItem(person, JSON.stringify(people));
-
-//   createTable(person);
-// }
 
 function createTable(person){
 let table = document.querySelector('tbody'); 
@@ -71,11 +56,42 @@ td.innerHTML = person.name;
 tr.appendChild(td);
 
 tdData.innerHTML = transformDate(person.birthdate); 
+tdData.dataset.id = person.id;
 tr.appendChild(tdData);
+
+tr.appendChild(btnDelete(person.id))
 
 table.appendChild(tr)
 
 }
+
+function btnDelete(id){
+  let btnDel = document.createElement('button');
+  btnDel.innerText = 'X'; 
+
+  btnDel.addEventListener('click', function(){ 
+    deleteElement(this.parentNode, id);
+  })
+
+  return btnDel; 
+}
+
+function updateElement(person){
+  document.querySelector("[data-id='"+person.id+"']").innerHTML = transformDate(inputDate.value); 
+}
+
+
+function deleteElement(element, id){
+element.remove();
+
+people.splice(people.findIndex(element => element.id === id), 1)
+localStorage.setItem('people', JSON.stringify(people));
+
+
+}
+
+
+
 
 
 
